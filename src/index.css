@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@layer components {
+
+  .navbar-items {
+    @apply relative flex items-center justify-center
+    h-16 w-36 mt-2 mb-2 mx-auto gap-1 bg-slate-800
+    text-blue-500 hover:bg-slate-500 hover:text-blue-100
+    cursor-pointer
+    transition-all
+    rounded-md hover:rounded-3xl ;
+  }
+
+}
