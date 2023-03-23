@@ -1,65 +1,68 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './components/Navbar/Navbar.component'
-import {
-  RiInstagramLine,
-  RiLinkedinBoxLine,
-  RiMailOpenLine,
-} from "react-icons/ri";
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar/Navbar.component";
+import { RiFileDownloadLine } from "react-icons/ri";
 
-import ThalesPicture from "./images/THALESFRONTfinal.png"
-import Techs from "./images/JavaScript-logo.png";
+import ThalesPicture from "./images/THALESFRONTEND.png";
+import ContactForm from "./components/Contact/Contact.component";
+import Hero from "./components/Hero/Hero.component";
+import Projects from "./components/Projects/Projects.component";
+import Resume from "./components/Resume/Resume.component";
 
 function App() {
 
   return (
     <div className="flex flex-col justify-center items-center w-screen">
       <Navbar></Navbar>
-      <div
-        id="home"
-        className="flex flex-row flex-wrap justify-center items-center h-screen w-screen bg-slate-800"
-      >
-        <div className="flex flex-col justify-center items-center w-1/2">
-          <h1 className="text-6xl font-bold text-blue-500 m-5">
-            Thales Cardoso
-          </h1>
-          <h3 className="text-4xl text-blue-100 m-5">FRONT-END DEVELOPER</h3>
 
-          <div className="flex flex-wrap gap-20 m-10 ">
-            <a href="">
-              <RiLinkedinBoxLine className="h-16 w-16 fill-blue-100 hover:scale-105 hover:fill-blue-500 hover:rotate-3 transition-all" />
-            </a>
-            <a href="#contact">
-              <RiMailOpenLine className="h-16 w-16 fill-blue-100 hover:scale-105 hover:fill-blue-500 hover:rotate-3 transition-all" />
-            </a>
+      <Hero picture={ThalesPicture}></Hero>
+
+      <Projects />
+
+      <Resume />
+
+      <ContactForm></ContactForm>
+
+      <div className="bg-[#f3f4f5] overflow-hidden dark:bg-slate-800 transition-all">
+        <h3 className="flex justify-center w-screen m-10 text-3xl lg:text-5xl font-std dark:text-white transition-all">
+          TECH I USE THE MOST
+        </h3>
+
+        <div
+          id="stack"
+          className=" flex flex-wrap gap-10 justify-center items-center h-auto w-full mb-10"
+        >
+          <div className="flex flex-wrap gap-20 justify-center items-center max-w-[90%]">
+            <img
+              className="w-24 h-24 p-1"
+              src="../src/images/React.png"
+              alt=""
+            />
+            <img
+              className="w-24 h-24 p-1"
+              src="../src/images/JavaScript-logo.png"
+              alt=""
+            />
+            <img
+              className="w-24 h-24 p-1"
+              src="../src/images/next-js.png"
+              alt=""
+            />
+            <img
+              className="w-24 h-24 p-1"
+              src="../src/images/Tailwind_CSS_Logo.svg.png"
+              alt=""
+            />
+            <img
+              className="w-24 h-24 p-1"
+              src="../src/images/sass.png"
+              alt=""
+            />
+            <img className="w-24 h-24 p-1" src="../src/images/ts.svg" alt="" />
           </div>
         </div>
-
-        <div className="flex flex-col grow justify-center items-center relative h-full bg-gradient-to-r from-slate-800 to-blue-900">
-          <img
-            className="absolute right-[10%] w-[200%] hover:scale-[101%] transition-all"
-            src={ThalesPicture}
-            alt="Picture of the developer"
-          />
-        </div>
       </div>
-
-      <div
-        className="flex flex-col justify-center items-center h-96 w-screen bg-slate-100"
-        id="projects"
-      ></div>
-
-      <div
-        className="flex flex-col justify-center items-center h-96 w-screen bg-slate-800"
-        id="resume"
-      ></div>
-
-      <div
-        className="flex flex-col justify-center items-center h-96 w-screen bg-slate-200"
-        id="contact"
-      ></div>
     </div>
   );
 }
 
-export default App
+export default App;
