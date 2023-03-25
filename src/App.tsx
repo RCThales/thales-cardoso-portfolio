@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar.component";
-import { RiFileDownloadLine } from "react-icons/ri";
 
-import ThalesPicture from "./images/THALESFRONTEND.png";
+import ThalesPicture from "./images/thalesheropic.png";
 import ContactForm from "./components/Contact/Contact.component";
 import Hero from "./components/Hero/Hero.component";
 import Projects from "./components/Projects/Projects.component";
@@ -22,8 +20,8 @@ function App() {
 
       <ContactForm></ContactForm>
 
-      <div className="bg-[#f3f4f5] overflow-hidden dark:bg-slate-800 transition-all">
-        <h3 className="flex justify-center w-screen m-10 text-3xl lg:text-5xl font-std dark:text-white transition-all">
+      <div className="bg-[#f3f4f5] overflow-hidden dark:bg-slate-800 transition-colors">
+        <h3 className="flex justify-center w-screen m-10 text-3xl lg:text-5xl font-std dark:text-white transition-colors">
           TECH I USE THE MOST
         </h3>
 

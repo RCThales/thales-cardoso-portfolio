@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100vw;
@@ -10,7 +11,27 @@ html, body {
 
 *::selection {
   color: white;
-  background-color: rgb(215, 0, 0);
+  background-color: rgb(225, 64, 64);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a47f7f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2d2e36;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 @layer components {
@@ -26,14 +47,18 @@ html, body {
   }
 
   .navbar-buttons {
-    @apply relative flex items-center justify-center rounded-full text-2xl h-16 w-44 mt-2 mb-2 mx-auto gap-1 bg-red-500 text-white hover:bg-white hover:text-red-500 hover:border hover:border-red-500 cursor-pointer transition-all font-notosansjp;
+    @apply relative flex items-center justify-center active:scale-95 rounded-full text-2xl h-16 w-16 mt-2 mb-2 mx-auto gap-1  text-red-500  border border-red-500 hover:border hover:text-white hover:bg-red-500 dark:hover:bg-red-500 dark:text-white dark:border-white cursor-pointer transition-all font-notosansjp;
   }
 
   .font-std {
-    @apply font-cabin;
+    @apply font-flamenco font-bold;
+  }
+
+  .font-std-p {
+    @apply font-flamenco font-normal;
   }
 
   .project {
-    @apply  h-96 w-[500px] max-w-[90vw] p-6 text-6xl shadow-lg bg-cover bg-center hover:scale-[101%] hover:shadow-md hover:shadow-red-500 transition-all bg-gray-100 border-2 border-gray-100 rounded-xl ;
+    @apply h-96 w-[500px] max-w-[90vw] p-6 text-6xl shadow-lg bg-cover bg-center hover:scale-[101%] hover:shadow-md hover:shadow-red-500 transition-colors bg-gray-100 border-2 border-gray-100 rounded-xl;
   }
 }
