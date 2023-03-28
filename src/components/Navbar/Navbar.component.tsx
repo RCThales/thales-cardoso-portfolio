@@ -1,23 +1,41 @@
 import {
-  RiAncientPavilionLine,
-  RiCodeSLine,
-  RiMailSendLine,
-  RiFileDownloadLine,
-} from "react-icons/ri";
-import { GiHamburgerMenu } from "react-icons/gi";
-import {
   BsFillMoonStarsFill,
   BsFillSunFill,
   BsStackOverflow,
 } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
+import {
+  RiAncientPavilionLine,
+  RiCodeSLine,
+  RiFileDownloadLine,
+  RiMailSendLine,
+} from "react-icons/ri";
 
-import React, { useState, useEffect, useContext } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../Context/theme.context";
 
 export const Navbar = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
   const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
+
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+  const handleScroll = useCallback(() => {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos || prevScrollPos < currentScrollPos) {
+      // user has scrolled up or down
+      if (navBarOpen) {
+        closeNavBarWithSwipe();
+      }
+    }
+    setPrevScrollPos(currentScrollPos);
+  }, [prevScrollPos]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   const triggerMode = () => {
     if (document.documentElement.classList.contains("dark")) {
@@ -56,8 +74,23 @@ export const Navbar = () => {
     }, 500);
   };
 
+  const closeNavBarWithSwipe = () => {
+    const navbarClasses = document.getElementById("navBarMobile")?.classList;
+
+    navbarClasses?.add("animate-disappearNavbar");
+
+    setTimeout(() => {
+      setNavBarOpen(false);
+    }, 500);
+  };
+
+  const preventDefault = useCallback((event : TouchEvent) => {
+    event.preventDefault();
+  }, []);
+
   return (
     <>
+      {/*NAVBAR OPENED WHEN ON BIG SCREENS*/}
       <nav
         className="shadow-lg hidden flex-col fixed left-0 top-0 gap-10 p-3
        lg:flex
@@ -98,6 +131,7 @@ export const Navbar = () => {
         </button>
       </nav>
 
+      {/*NAVBAR CLOSED WHEN ON MOBILE*/}
       <nav
         className="flex justify-evenly items-center shadow-lg lg:hidden h-20 flex-col fixed left-0 top-0 gap-10 p-3
         text-white w-screen z-50 bg-[#FFFDFA] rounded-b-10 dark:bg-slate-800"
@@ -107,6 +141,7 @@ export const Navbar = () => {
         </button>
       </nav>
 
+      {/*NAVBAR OPENED WHEN ON MOBILE*/}
       {navBarOpen && (
         <div
           id="navBarMobile"
