@@ -297,7 +297,7 @@ const Projects: React.FC = () => {
           <ProjectItems
             techs={[
               {
-                name: "Compile It!",
+                name: "Unity",
                 color: "bg-black",
               },
               {
@@ -305,7 +305,7 @@ const Projects: React.FC = () => {
                 color: "bg-blue-800",
               },
             ]}
-            projectTitle="Unity"
+            projectTitle="Compile It"
             id={4}
             toggleFunction={toggleProjectModal}
             pictureLight={
