@@ -113,7 +113,7 @@ const ProjectDetails: React.FC<Props> = ({
                 />
 
                 {!imagesLoaded && (
-                  <div className="animate-spin absolute inset-0 mx-auto my-auto rounded-full h-20 w-20 border-t-4 border-red-900"></div>
+                  <div className="animate-spin inset-0 mx-auto my-auto rounded-full h-20 w-20 border-t-4 border-red-900"></div>
                 )}
 
                 {/*Picture Fullscreen Overlay*/}
