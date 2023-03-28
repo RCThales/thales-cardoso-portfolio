@@ -28,7 +28,7 @@ function ContactForm() {
         ></path>
       </svg>
       <div></div>
-      <h1 className="font-std text-5xl p-10 z-40 dark:text-white transition-colors">
+      <h1 className="font-std text-5xl p-10 z-40 text-center dark:text-white transition-colors">
         SEND ME A MESSAGE :)
       </h1>
       <div className="flex flex-col mb-4 w-[80%] max-w-[800px] z-40">

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import {
@@ -33,10 +33,9 @@ const ProjectDetails: React.FC<Props> = ({
   demoLink,
   repoLink,
 }) => {
-  if (!visible) return null;
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  const pictureOverlay = useRef<HTMLDivElement>(null);
-  const pictureRefs = useRef<Array<HTMLImageElement | undefined>>([]);
+  if (!visible) return null;
 
   const toggleModal = () => {
     toggle();
@@ -73,9 +72,11 @@ const ProjectDetails: React.FC<Props> = ({
     element?.classList.remove("my-auto");
     element?.classList.remove("inset-0");
     element?.classList.remove("z-[100]");
-
   };
 
+  const loading = () => {
+    setImagesLoaded(true);
+  };
 
   return (
     <>
@@ -97,7 +98,6 @@ const ProjectDetails: React.FC<Props> = ({
           </h1>
 
           {imgs.map((e, index) => {
-          //pictureRefs?.current?[index] = useRef(null); 
             return (
               <div
                 key={uuidv4()}
@@ -105,12 +105,17 @@ const ProjectDetails: React.FC<Props> = ({
                 className="flex justify-center items-center w-[95%] cursor-pointer"
               >
                 <img
-                  //ref={pictureRefs.current[index]}
+                  onLoad={loading}
                   id={"project_pic_" + (index + 1)}
                   src={e}
                   alt={`Project picture ${index + 1}`}
                   className="w-[90%] h-auto rounded-lg shadow-lg cursor-pointer"
                 />
+
+                {!imagesLoaded && (
+                  <div className="animate-spin absolute inset-0 mx-auto my-auto rounded-full h-20 w-20 border-t-4 border-red-900"></div>
+                )}
+
                 {/*Picture Fullscreen Overlay*/}
                 <div
                   id={"picture_overlay_" + (index + 1)}

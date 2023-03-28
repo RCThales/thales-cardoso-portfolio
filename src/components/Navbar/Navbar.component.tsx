@@ -21,6 +21,8 @@ export const Navbar = () => {
 
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
 
+  /*SWIPE TO CLOSE NAVBAR - START*/
+
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.pageYOffset;
     if (prevScrollPos > currentScrollPos || prevScrollPos < currentScrollPos) {
@@ -36,6 +38,8 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
+
+  /*SWIPE TO CLOSE NAVBAR - END*/
 
   const triggerMode = () => {
     if (document.documentElement.classList.contains("dark")) {
@@ -84,7 +88,7 @@ export const Navbar = () => {
     }, 500);
   };
 
-  const preventDefault = useCallback((event : TouchEvent) => {
+  const preventDefault = useCallback((event: TouchEvent) => {
     event.preventDefault();
   }, []);
 
