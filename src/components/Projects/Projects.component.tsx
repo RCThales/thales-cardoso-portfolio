@@ -297,7 +297,7 @@ const Projects: React.FC = () => {
           <ProjectItems
             techs={[
               {
-                name: "Unity",
+                name: "Compile It!",
                 color: "bg-black",
               },
               {
