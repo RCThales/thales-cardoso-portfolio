@@ -14,6 +14,7 @@ import { ThemeContext } from "../../Context/theme.context";
 const Hero: React.FC<Props> = ({ picture }) => {
 
   const {currentTheme} = useContext(ThemeContext)
+  
 
   return (
     <div
@@ -22,7 +23,7 @@ const Hero: React.FC<Props> = ({ picture }) => {
     >
       <div className="flex flex-col justify-center items-center lg:w-1/2">
         <div className="flex flex-col flex-wrap justify-center items-center gap-2 m-10 ">
-          <h2 className="text-4xl lg:text-5xl text-red-500 font-std italic">
+          <h2 className="text-3xl lg:text-5xl text-red-500 font-std italic">
             {"<Hello>"}
           </h2>
           <h3 className="text-6xl m-4 text-center font-std-p dark:text-white">
@@ -31,7 +32,7 @@ const Hero: React.FC<Props> = ({ picture }) => {
 
           <a
             href="#projects"
-            className="text-4xl lg:text-5xl text-red-500 italic cursor-pointer font-std"
+            className="text-3xl lg:text-5xl text-red-500 italic cursor-pointer font-std max-w-[90%]"
           >
             {"<Front-End Developer/>"}
           </a>

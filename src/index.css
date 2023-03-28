@@ -59,6 +59,6 @@ body {
   }
 
   .project {
-    @apply h-96 w-[500px] max-w-[90vw] p-6 text-6xl shadow-lg bg-cover bg-center hover:scale-[101%] hover:shadow-md hover:shadow-red-500 transition-colors bg-gray-100 border-2 border-gray-100 rounded-xl;
+    @apply h-96 w-[500px] max-w-[90vw] object-cover text-6xl shadow-lg bg-cover bg-center hover:scale-[101%] hover:shadow-md hover:shadow-red-500 transition-colors bg-gray-100 border-2 border-gray-100 rounded-xl;
   }
 }

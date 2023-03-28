@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../Context/theme.context";
 import ProjectDetails from "../ProjectDetails/ProjectDetails.component";
+import ProjectItems from "../ProjectItem/ProjectItems.component";
 
 export interface Tech {
   img: string;
@@ -35,34 +36,34 @@ const Projects: React.FC = () => {
       title: "This Website :)",
       text: "Introducing my portfolio website - a dynamic and responsive platform coded entirely by me using React, Tailwind, HTML, and CSS. I carefully crafted the design and structure to ensure it's visually appealing and easy to navigate. My hands-on approach allowed me to fine-tune every detail, resulting in a true reflection of my web development skills and passion. Discover my dedication to excellence and explore my portfolio website now!",
       imgs: [
-        "../../../src/images/projects/1 IMG1.jpg",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thiswebsite_dark.jpg",
 
-        "../../../src/images/thiswebsite.jpg",
-        "../../../src/images/projects/GIF 1.gif",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/ProjectDetails/thiswebsite2.jpg",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/ProjectDetails/thiswebsite3.gif",
       ],
       techs: [
         {
-          img: "../../../src/images/htmllogo.webp",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/htmllogo.webp",
           name: "HTML",
         },
         {
-          img: "../../../src/images/csslogo.webp",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/csslogo.webp",
           name: "CSS",
         },
         {
-          img: "../../../src/images/ts.svg",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/ts.svg",
           name: "Typescript",
         },
         {
-          img: "../../../src/images/JavaScript-logo.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/js.svg",
           name: "Javascript",
         },
         {
-          img: "../../../src/images/React.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/react.svg",
           name: "React",
         },
         {
-          img: "../../../src/images/Tailwind_CSS_Logo.svg.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/tailwind.svg",
           name: "Tailwind",
         },
       ],
@@ -73,34 +74,34 @@ const Projects: React.FC = () => {
       title: "Batour Website",
       text: "Introducing BATOUR - an e-commerce platform that offers premium organic dried fruits sourced from Afghanistan, empowering women with job opportunities. As a front-end developer, I was responsible for coding the entire website using cutting-edge technologies including NEXT.js, React, SASS, HTML, CSS, and JavaScript. I also integrated Firebase for authentication and database management, ensuring secure transactions and data storage. From the initial design stages to the final deployment, I was hands-on with every aspect of the project, fine-tuning every detail to deliver an exceptional user experience. BATOUR is not just a website, but a social enterprise that promotes sustainability and empowers women, and I am proud to have played a part in bringing this vision to life.",
       imgs: [
-        "../../../src/images/batour.jpg",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/batour1.jpg",
 
-        "../../../src/images/projects/batour2.gif",
-        "../../../src/images/projects/batour3.gif",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/batour2.gif",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/batour3.gif",
       ],
       techs: [
         {
-          img: "../../../src/images/htmllogo.webp",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/htmllogo.webp",
           name: "HTML",
         },
         {
-          img: "../../../src/images/csslogo.webp",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/csslogo.webp",
           name: "CSS",
         },
         {
-          img: "../../../src/images/next-js.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/next-js.png",
           name: "Next.JS 13",
         },
         {
-          img: "../../../src/images/JavaScript-logo.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/js.svg",
           name: "Javascript",
         },
         {
-          img: "../../../src/images/React.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/react.svg",
           name: "React",
         },
         {
-          img: "../../../src/images/firebase_logo.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/firebase.svg",
           name: "Firebase",
         },
       ],
@@ -111,22 +112,22 @@ const Projects: React.FC = () => {
       title: "ThalesBoy Color",
       text: "ThalesBoy Color is a web-based video game inspired by Nintendo's Gameboy Color. I built the entire game from scratch using Vanilla Javascript, CSS, and HTML, and it's fully playable in your web browser. The game features classic pixelated graphics and chiptune soundtrack, and it's responsive, adapting seamlessly to any device. ThalesBoy Color is a testament to my skills as a front-end developer and a fun addition to my portfolio.",
       imgs: [
-        "../../../src/images/thalesboy.jpg",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thalesboy_dark.jpg",
 
-        "../../../src/images/projects/thalesboy2.jpg",
-        "../../../src/images/projects/thalesboy3.gif",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thalesboy_light.jpg",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thalesboy3.gif",
       ],
       techs: [
         {
-          img: "../../../src/images/htmllogo.webp",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/htmllogo.webp",
           name: "HTML",
         },
         {
-          img: "../../../src/images/csslogo.webp",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/csslogo.webp",
           name: "CSS",
         },
         {
-          img: "../../../src/images/JavaScript-logo.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/js.svg",
           name: "Javascript",
         },
       ],
@@ -137,21 +138,21 @@ const Projects: React.FC = () => {
       title: "Compile it",
       text: "Compile It is a Unity game I created using C#, with all art and music made by me. Despite not being a front-end project, I love making indie games in my free time. The game is set in a futuristic world with challenging obstacles, enemies (bugs), and much needed coffee mugs. It features a simple gameplay, with custom music and difficulty levels. Compile It is a fun and challenging game that showcases my programming, art, and music skills.",
       imgs: [
-        "../../../src/images/compileit.jpg",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/compileit.jpg",
 
-        "../../../src/images/projects/compileit2.gif",
+        "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/compileit2.gif",
       ],
       techs: [
         {
-          img: "../../../src/images/unitylogo.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/unity.svg",
           name: "Unity",
         },
         {
-          img: "../../../src/images/csharp_logo.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/c%23.svg",
           name: "C#",
         },
         {
-          img: "../../../src/images/pslogo.png",
+          img: "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/technologies/psd.svg",
           name: "Photoshop",
         },
       ],
@@ -160,7 +161,6 @@ const Projects: React.FC = () => {
     },
   };
 
-  console.log(projects[1].techs[0].img);
   const toggleProjectModal = (id: number) => {
     if (id !== 0) {
       setTitle(projects[id as keyof typeof projects].title);
@@ -194,116 +194,127 @@ const Projects: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-respgrid w-screen gap-20 pb-24 lg:mb-[20%] z-20">
           {/*PROJECT 1 THIS WEBSITE*/}
-          <div className="flex flex-col font-std justify-center items-center">
-            <button
-              onClick={() => toggleProjectModal(1)}
-              className={
-                currentTheme === "dark"
-                  ? "project bg-[url('./src/images/thiswebsite_dark.jpg')]  transition-all"
-                  : "project bg-[url('./src/images/thiswebsite_light.jpg')]  transition-all"
-              }
-            ></button>
-            <h3 className="text-xl text-center m-4">This Website :)</h3>
-            <ul className="flex flex-wrap gap-3 justify-center">
-              <li className="bg-blue-600 w-20 flex justify-center text-white rounded-lg">
-                REACT
-              </li>
-              <li className="bg-yellow-600 w-20 flex justify-center text-white rounded-lg">
-                Javascript
-              </li>
-              <li className="bg-blue-400 w-20 flex justify-center text-white rounded-lg">
-                Tailwind
-              </li>
-              <li className="bg-orange-500 w-20 flex justify-center text-white rounded-lg">
-                CSS
-              </li>
-              <li className="bg-black w-20 flex justify-center text-white rounded-lg">
-                HTML
-              </li>
-            </ul>
-          </div>
+          <ProjectItems
+            techs={[
+              {
+                name: "REACT",
+                color: "bg-blue-600",
+              },
+              {
+                name: "Javascript",
+                color: "bg-yellow-600",
+              },
+              {
+                name: "Tailwind",
+                color: "bg-blue-400",
+              },
+              {
+                name: "CSS",
+                color: "bg-orange-500",
+              },
+              {
+                name: "HTML",
+                color: "bg-black",
+              },
+            ]}
+            projectTitle="This Website =)"
+            id={1}
+            toggleFunction={toggleProjectModal}
+            pictureLight={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thiswebsite1.jpg"
+            }
+            pictureDark={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thiswebsite_dark.jpg"
+            }
+          ></ProjectItems>
           {/*PROJECT 2 - BATOUR*/}
-          <div className="flex flex-col font-std justify-center items-center">
-            <button
-              onClick={() => toggleProjectModal(2)}
-              className="project bg-[url('./src/images/batour.jpg')]  transition-all"
-            ></button>
-            <h3 className="text-xl text-center m-4">
-              Batour Website (<a href="https:/www.batour.ca">www.batour.ca</a>)
-            </h3>
-            <ul className="flex flex-wrap  gap-3 justify-center">
-              <li className="bg-blue-500 w-20 flex justify-center text-white rounded-lg">
-                REACT
-              </li>
-              <li className="bg-yellow-600 w-20 flex justify-center text-white rounded-lg">
-                Javascript
-              </li>
-              <li className="bg-orange-600 w-20 flex justify-center text-white rounded-lg">
-                Firebase
-              </li>
-              <li className="bg-purple-500 w-20 flex justify-center text-white rounded-lg">
-                NEXT.JS
-              </li>
-              <li className="bg-pink-500 w-20 flex justify-center text-white rounded-lg">
-                SASS
-              </li>
-              <li className="bg-black w-20 flex justify-center text-white rounded-lg">
-                HTML
-              </li>
-            </ul>
-          </div>
+          <ProjectItems
+            techs={[
+              {
+                name: "REACT",
+                color: "bg-blue-600",
+              },
+              {
+                name: "Javascript",
+                color: "bg-yellow-600",
+              },
+              {
+                name: "Firebase",
+                color: "bg-orange-600",
+              },
+              {
+                name: "NEXT.JS",
+                color: "bg-purple-500",
+              },
+              {
+                name: "SASS",
+                color: "bg-pink-500",
+              },
+              {
+                name: "HTML",
+                color: "bg-black",
+              },
+            ]}
+            projectTitle="Batour Website"
+            id={2}
+            toggleFunction={toggleProjectModal}
+            pictureLight={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/batour1.jpg"
+            }
+            pictureDark={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/batour1.jpg"
+            }
+          ></ProjectItems>
+
           {/*PROJECT 3 - THALESBOY*/}
-          <div className="flex flex-col font-std justify-center items-center">
-            <button
-              onClick={() => toggleProjectModal(3)}
-              className={
-                currentTheme === "dark"
-                  ? "project bg-[url('./src/images/thalesboy.jpg')]  transition-all"
-                  : "project bg-[url('./src/images/thalesboy_light.jpg')]  transition-all"
-              }
-            ></button>
-            <h3 className="text-xl text-center m-4">
-              ThalesBoy Color (
-              <a target="_blank" href="https://thalesboycolor.netlify.app/">
-                https://thalesboycolor.netlify.app/
-              </a>
-              )
-            </h3>
-            <ul className="flex flex-wrap  gap-3 justify-center">
-              <li className="bg-yellow-600 w-20 flex justify-center text-white rounded-lg">
-                Javascript
-              </li>
-              <li className="bg-orange-500 w-20 flex justify-center text-white rounded-lg">
-                CSS
-              </li>
-              <li className="bg-black w-20 flex justify-center text-white rounded-lg">
-                HTML
-              </li>
-            </ul>
-          </div>
+          <ProjectItems
+            techs={[
+              {
+                name: "Javascript",
+                color: "bg-yellow-600",
+              },
+              {
+                name: "CSS",
+                color: "bg-orange-500",
+              },
+              {
+                name: "HTML",
+                color: "bg-black",
+              },
+            ]}
+            projectTitle="ThalesBoy Color"
+            id={3}
+            toggleFunction={toggleProjectModal}
+            pictureLight={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thalesboy_light.jpg"
+            }
+            pictureDark={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/thalesboy_dark.jpg"
+            }
+          ></ProjectItems>
 
           {/*PROJECT 4 - UNITYGAME*/}
-          <div className="flex flex-col font-std justify-center items-center">
-            <button
-              onClick={() => toggleProjectModal(4)}
-              className="project bg-[url('./src/images/compileit.jpg')] transition-all"
-            ></button>
-            <h3 className="text-xl text-center m-4">
-              Compile it (
-              <a target="_blank" href="https://thandoros.itch.io/compile-it">
-                https://thandoros.itch.io/compile-it
-              </a>
-              )
-            </h3>
-            <ul className="flex flex-wrap  gap-3 justify-center">
-              <li className="bg-blue-800 w-20 flex justify-center text-white rounded-lg">
-                C#
-              </li>
-              <li className="bg-black w-20 flex justify-center text-white rounded-lg">
-                UNITY
-              </li>
-            </ul>
-          </div>
+          <ProjectItems
+            techs={[
+              {
+                name: "Unity",
+                color: "bg-black",
+              },
+              {
+                name: "C#",
+                color: "bg-blue-800",
+              },
+            ]}
+            projectTitle="Unity"
+            id={4}
+            toggleFunction={toggleProjectModal}
+            pictureLight={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/compileit.jpg"
+            }
+            pictureDark={
+              "https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Projects/compileit.jpg"
+            }
+          ></ProjectItems>
         </div>
 
         <svg

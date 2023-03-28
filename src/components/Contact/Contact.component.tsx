@@ -3,15 +3,16 @@ import React, { useState, useRef, useContext } from "react";
 import { ThemeContext } from "../../Context/theme.context";
 
 function ContactForm() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState(import.meta.env.VITE_EMAIL);
     const form = useRef(null);
+
 
   const { currentTheme } = useContext(ThemeContext);
   return (
     <form
+      action={`https://formsubmit.co/${email}`}
+      method="POST"
       ref={form}
-      onSubmit={undefined}
       id="contact"
       className="relative flex flex-col justify-center pb-40 items-center w-screen max-w-full transition-colors dark:bg-slate-600"
     >
@@ -23,7 +24,6 @@ function ContactForm() {
         <path
           fill={currentTheme === "dark" ? "#1E293B" : "#f3f4f5"}
           className="transition-colors"
-          fill-opacity="1"
           d="M0,32L1440,128L1440,320L0,320Z"
         ></path>
       </svg>
@@ -42,9 +42,9 @@ function ContactForm() {
           className="appearance-none border rounded-lg py-2 px-3 transition-colors text-gray-700 dark:text-white dark:bg-slate-500 leading-tight focus:outline-none focus:shadow-outline"
           id="email"
           type="email"
+          name="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          required
         />
       </div>
       <div className="flex flex-col mb-4 w-[80%] max-w-[800px] z-40">
@@ -58,8 +58,8 @@ function ContactForm() {
           className="appearance-none border rounded-lg py-2 px-3 h-80 transition-colors text-gray-700 dark:text-white dark:bg-slate-500 leading-tight focus:outline-none focus:shadow-outline"
           id="message"
           placeholder="Enter your message here"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          name="message"
+          required
         />
       </div>
       <div className="flex justify-center">
@@ -70,6 +70,9 @@ function ContactForm() {
           Send Email
         </button>
       </div>
+
+      <input type="hidden" name="_template" value="box"></input>
+      <input type="hidden" name="_next" value="http://localhost:5173/"></input>
     </form>
   );
 }
