@@ -39,7 +39,7 @@ const Resume = () => {
         <div className="relative flex justify-center items-center h-auto w-screen mb-24 m-10 ">
           <a
             download
-            href="../THALESCARDOSORESUME.pdf"
+            href="https://portfolio-bucket-thalescardoso.s3.amazonaws.com/Resume/THALES+CARDOSO+-+RESUME.pdf"
             className="absolute bottom-0 cursor-pointer flex mb-10 gap-5 translate-y-20 justify-center items-center
             bg-red-600 rounded-xl text-white w-auto max-w-[80%] h-48
             hover:scale-[105%] shadow-xl
