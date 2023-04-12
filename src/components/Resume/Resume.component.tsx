@@ -4,32 +4,34 @@ const Resume = () => {
   return (
     <>
       <div className="flex flex-col lg:flex-row gap-24 relative z-30 w-screen bg-[#f3f4f5] dark:text-white dark:bg-slate-800 justify-center items-center">
-        <div className="flex flex-col justify-start w-full z-40  items-center lg:h-96 lg:justify-center rounded-2xl translate-y-20">
+        <div className="flex flex-col justify-start w-full z-40  items-center lg:h-96 lg:justify-center rounded-2xl translate-y-10">
           <ol className="text-[2rem]  lg:text-[3.5rem] font-std flex flex-col mb-40 items-start justify-center lg:block">
             <li className="hover:scale-[102%] transition-all">
-              <span className="text-red-500 font-bold">F</span>ocused
+              <span className="text-red-500 font-bold">D</span>edicated
             </li>
             <li className="hover:scale-[102%] transition-all translate-x-[5px] lg:translate-x-10">
-              <span className="text-red-500 font-bold">R</span>esourceful
+              <span className="text-red-500 font-bold">E</span>ffective
             </li>
             <li className="hover:scale-[102%] transition-all translate-x-[10px] lg:translate-x-20">
-              <span className="text-red-500 font-bold">O</span>rganized
+              <span className="text-red-500 font-bold">V</span>isionary
             </li>
             <li className="hover:scale-[102%] transition-all translate-x-[15px] lg:translate-x-28">
-              <span className="text-red-500 font-bold">N</span>ever-give-up
-              attitude
+              <span className="text-red-500 font-bold">E</span>ngaged
             </li>
             <li className="hover:scale-[102%] transition-all translate-x-[20px] lg:translate-x-36">
-              <span className="text-red-500 font-bold">T</span>eam worker
+              <span className="text-red-500 font-bold">L</span>earner
             </li>
             <li className="hover:scale-[102%] transition-all translate-x-[25px] lg:translate-x-44">
-              <span className="text-red-500 font-bold">E</span>fficient
+              <span className="text-red-500 font-bold">O</span>rganized
             </li>
             <li className="hover:scale-[102%] transition-all translate-x-[30px] lg:translate-x-52">
-              <span className="text-red-500 font-bold">N</span>urturing
+              <span className="text-red-500 font-bold">P</span>roblem-solver
             </li>
             <li className="hover:scale-[102%] transition-all translate-x-[35px] lg:translate-x-60">
-              <span className="text-red-500 font-bold">D</span>etail-oriented
+              <span className="text-red-500 font-bold">E</span>ager
+            </li>
+            <li className="hover:scale-[102%] transition-all translate-x-[40px] lg:translate-x-72">
+              <span className="text-red-500 font-bold">R</span>esourceful
             </li>
           </ol>
         </div>

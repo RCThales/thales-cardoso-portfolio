@@ -140,13 +140,14 @@ const ProjectDetails: React.FC<Props> = ({
                   <img
                     src={e.img}
                     alt="Project pictures"
-                    className="w-20 h-auto rounded-lg"
+                    className="w-20 h-auto rounded-lg hover:scale-105 transition-all"
                   />
                   <h4 className="text-2xl">{e.name}</h4>
                 </div>
               );
             })}
           </div>
+
 
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-std text-center mt-10">
             SEE IT IN ACTION!

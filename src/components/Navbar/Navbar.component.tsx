@@ -137,6 +137,7 @@ export const Navbar = () => {
 
       {/*NAVBAR CLOSED WHEN ON MOBILE*/}
       <nav
+      id="mobile_nav"
         className="flex justify-evenly items-center shadow-lg lg:hidden h-20 flex-col fixed left-0 top-0 gap-10 p-3
         text-white w-screen z-50 bg-[#FFFDFA] rounded-b-10 dark:bg-slate-800"
       >

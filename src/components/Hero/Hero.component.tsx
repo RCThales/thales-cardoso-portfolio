@@ -19,7 +19,7 @@ const Hero: React.FC<Props> = ({ picture }) => {
   return (
     <div
       id="home"
-      className="flex pb-20 pt-20 md:pt-20 lg:pt-10 flex-col transition-colors lg:flex-row relative justify-center items-center w-screen bg-cover bg-center bg-[url('../public/bg-header.jpg')] dark:bg-[url('../public/header-dark.jpg')]"
+      className="flex pb-20 pt-20 md:pt-20 lg:pt-10 flex-col transition-colors lg:flex-row relative justify-center items-center w-screen bg-cover bg-center bg-[url('../bg-header.jpg')] dark:bg-[url('../header-dark.jpg')]"
     >
       <div className="flex flex-col justify-center items-center lg:w-1/2">
         <div className="flex flex-col flex-wrap justify-center items-center gap-2 m-10 ">
